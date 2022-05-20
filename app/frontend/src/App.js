@@ -45,7 +45,7 @@ function App() {
         </div>
 
         <div className="flex-column ">
-          <div className='d-flex justify-content-center'>
+          <div className="d-flex justify-content-center">
             {isCreate ? (
               <button
                 type="button"

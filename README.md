@@ -13,6 +13,7 @@ O projeto se baseia na necessidade de resolver o problema de organização e pro
 **Back-end:** Nodejs, Express, Sequelize, Docker
 
 **DataBase:** MySQL
+
 **Testes:** React Testing Library, Mocha, Sinon e Chai.
 
 ## Funcionalidades
