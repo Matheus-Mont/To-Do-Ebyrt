@@ -34,7 +34,8 @@ export default function TaskCardEdit ({task, tEdit, getTasks}) {
 
   }
   return (
-    <section>
+    <section className='card-desc'>
+      <div>
      <input className= "form-control" value={title} onChange={ handleTitle } />
      <textarea className= "form-control" value={description} onChange={ handleDescription } />
      <select className= "form-control" value={status} onChange={ handleStatus }> 
@@ -42,7 +43,8 @@ export default function TaskCardEdit ({task, tEdit, getTasks}) {
         <option value="pendente">Pendente</option>
         <option value="pronto">Pronto</option>
      </select>
-     <button id={task.id} className= "btn btn-success m-2" type="button" onClick={handleClick}>Terminar edição</button>
+      </div>
+     <button id={task.id} className= "btn btn-success text-center" type="button" onClick={handleClick}>Terminar edição</button>
     </section>
   )
 }

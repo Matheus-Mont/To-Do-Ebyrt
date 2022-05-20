@@ -1,5 +1,6 @@
 body {
   background-color: rgb(56, 63, 66);
+  margin-bottom: 10px;
 }
 
 .task-card {
@@ -10,4 +11,17 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.card-desc {
+  height: 94%;
+}
+
+textarea {
+  height: 100px
+}
+
+footer{
+  position: relative;
+  bottom: 0;
 }
