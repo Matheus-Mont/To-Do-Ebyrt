@@ -12,16 +12,14 @@ export default function OrderByStatus ({ changeList, dados}) {
     changeList([...tasks]);
   }
   return (
-    <section>
-      <label htmlFor="order">
-        Status:  
-        <select id='order' value={ all } onChange={handleChange} > 
-        <option disabled></option>
-        <option value="em andamento">Em andamento</option>
-        <option value="pendente">Pendente</option>
-        <option value="pronto">Pronto</option>
+    <section className="d-flex justify-content-center">
+  
+        <select className="form-select text-center" id='order' value={ all } onChange={handleChange} > 
+          <option disabled></option>
+          <option value="em andamento">Em andamento</option>
+          <option value="pendente">Pendente</option>
+          <option value="pronto">Pronto</option>
         </select>
-      </label>
     </section>
   )
 }

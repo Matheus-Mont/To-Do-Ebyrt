@@ -14,12 +14,12 @@ export default function TaskCard ({task, getTasks}) {
   }
 
   return (
-    <section>
+    <section className="task-card m-2 card bg-light">
      {!edit ? (
      <TaskCardVisual task={task} tEdit={() => setEdit(!edit)} /> 
      ) : (
      < TaskCardEdit task={task} tEdit={() => setEdit(!edit)} getTasks={getTasks}/> )}
-     <button id={task.id} type='button' onClick={handleClick}>Deletar tarefa</button>
+     <button className= "btn btn-danger" id={task.id} type='button' onClick={handleClick}>Deletar tarefa</button>
     </section>
   )
 }

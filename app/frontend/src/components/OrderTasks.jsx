@@ -15,11 +15,12 @@ const orderByCrono = () => {
   changeList([...list]);
 }
   return (
-    <section>
-        Ordenar tabela por: 
-       <button type='button' onClick={ getTasks }>Todas as tarefas</button>
-       <button type='button' onClick={ orderByA }>Ordem alfabética</button>
-       <button type='button' onClick={ orderByCrono }>Ordem cronológica</button>
+    <section className=''>
+      <div className="order-header">
+       <button className="btn btn-primary m-1" type='button' onClick={ getTasks }>Todas as tarefas</button>
+       <button className="btn btn-primary m-1" type='button' onClick={ orderByA }>Ordem alfabética</button>
+       <button className="btn btn-primary m-1" type='button' onClick={ orderByCrono }>Ordem cronológica</button>
+      </div>
        <OrderByStatus list={list} changeList={changeList} dados={dados}/>
     </section>
   )
