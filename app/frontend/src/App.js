@@ -1,43 +1,70 @@
 import { useState, useEffect } from 'react';
+import Footer from './components/Footer';
 import InputTask from './components/InputTask';
 import OrderTasks from './components/OrderTasks';
 import TasksList from './components/TasksList';
 import generateTasks from './services/api';
 
 function App() {
-  const[dados, setDados] = useState([]);
+  const [dados, setDados] = useState([]);
   const [list, setList] = useState([]);
-  const[isCreate, setIsCreate] = useState(true);
+  const [isCreate, setIsCreate] = useState(true);
 
   useEffect(() => {
-    getTasks();    
+    getTasks();
   }, []);
 
   const getTasks = async () => {
-    const {data} = await generateTasks('/tasks');
+    const { data } = await generateTasks('/tasks');
     setDados(data);
     setList(data);
-    console.log('teste')
-  }
+    console.log('teste');
+  };
 
   const newTask = () => {
-    setIsCreate(!isCreate)
-  }
+    setIsCreate(!isCreate);
+  };
 
   return (
-    <div>
-      <header>
-        <h1>Lista de tarefas Ebytr</h1>
+    <div className="m-0">
+      <header className="text-white text-center">
+        <h1 className="m-0 pt-3 pb-3 bg-dark">Lista de tarefas Ebytr</h1>
       </header>
-      <main>
-        <OrderTasks list={list} changeList={(v) => setList(v)} getTasks={getTasks} dados={dados} />
-        <TasksList tasks={list} getTasks={getTasks}/>
+      <main className="mb-4">
+        <div className="flex-column justify-content-center p-3">
+          <div class="p-0 m-0">
+            <header class="flex text-center">
+              <OrderTasks
+                list={list}
+                changeList={(v) => setList(v)}
+                getTasks={getTasks}
+                dados={dados}
+              />
+            </header>
+          </div>
+        </div>
 
-        {isCreate ? (
-        <button type='button' onClick={newTask}> Criar nova tarefa </button>
-        ) : <InputTask isCreate={ newTask } gTasks={getTasks}/> }
-
+        <div className="flex-column ">
+          <div className='d-flex justify-content-center'>
+            {isCreate ? (
+              <button
+                type="button"
+                className="btn btn-primary "
+                onClick={newTask}
+              >
+                {' '}
+                Criar nova tarefa{' '}
+              </button>
+            ) : (
+              <InputTask isCreate={newTask} gTasks={getTasks} />
+            )}
+          </div>
+          <div>
+            <TasksList tasks={list} getTasks={getTasks} />
+          </div>
+        </div>
       </main>
+      <Footer />
     </div>
   );
 }

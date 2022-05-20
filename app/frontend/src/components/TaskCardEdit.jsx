@@ -35,14 +35,14 @@ export default function TaskCardEdit ({task, tEdit, getTasks}) {
   }
   return (
     <section>
-     <input value={title} onChange={ handleTitle } />
-     <textarea value={description} onChange={ handleDescription } />
-     <select value={status} onChange={ handleStatus }> 
+     <input className= "form-control" value={title} onChange={ handleTitle } />
+     <textarea className= "form-control" value={description} onChange={ handleDescription } />
+     <select className= "form-control" value={status} onChange={ handleStatus }> 
         <option value="em andamento">Em andamento</option>
         <option value="pendente">Pendente</option>
         <option value="pronto">Pronto</option>
      </select>
-     <button id={task.id} type="button" onClick={handleClick}>Terminar edição</button>
+     <button id={task.id} className= "btn btn-success m-2" type="button" onClick={handleClick}>Terminar edição</button>
     </section>
   )
 }
