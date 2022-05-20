@@ -19,7 +19,8 @@ module.exports = {
       },
       status: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: 'em andamento'
       },
       createdAt: {
         allowNull: false,

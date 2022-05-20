@@ -3,8 +3,8 @@ const { Task } = require('../models')
 // const name = async (req, res, next) => {};
 
 const validateCreation = async (req, res, next) => {
-  const { title, description, status } = req.body;
-  const check = title && description && status;
+  const { title, description } = req.body;
+  const check = title && description;
 
   if (!check) return res.status(400).json({message: 'Fields must not be empty'});
 

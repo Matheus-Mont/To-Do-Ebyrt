@@ -1,3 +1,4 @@
+require('dotenv/config');
 const express = require('express');
 const app = express();
 const taskRouter = require('./routes/tasksRoute');
@@ -11,5 +12,5 @@ app.use('/tasks', taskRouter);
 
 app.use(error);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Ouvindo na porta ${PORT}`));
