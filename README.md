@@ -99,7 +99,7 @@ Nesse projeto ocorrem 2 tipos de testes, os de backend e os de frontend. Utilize
 
 ## Variáveis de Ambiente
 
-**Você irá precisar configurar as variáveis globais do MySQL.** Você pode usar esse [Conteúdo de variáveis de ambiente com NodeJS](https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/) como referência.
+Caso queira rodar localmente sem usar o Docker Compose, terá que criar variáveis de ambiente. Você irá precisar configurar as variáveis globais do MySQL. Você pode usar esse [Conteúdo de variáveis de ambiente com NodeJS](https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/) como referência.
 
 ## Feedback
 
