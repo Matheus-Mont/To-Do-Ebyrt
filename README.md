@@ -39,6 +39,7 @@ O front-end é composto por uma página única, que contém um espaço em que as
 - [Node](https://nodejs.org/en/)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [Docker](https://www.docker.com/)
+  - [Docker-compose](https://docs.docker.com/compose/)
 
 ## Pré-instalação
 
