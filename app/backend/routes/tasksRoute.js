@@ -6,7 +6,7 @@ const {validateCreation, findTasks} = require('../middlewares/validations');
 
 route.get('/', rescue(getTasks));
 route.post('/', validateCreation, rescue(createTasks));
-route.put('/:id', findTasks, validateCreation, rescue(updateTasks));
+route.put('/:id', validateCreation, findTasks, rescue(updateTasks));
 route.delete('/:id', findTasks, rescue(deleteTasks));
 
 module.exports = route;
