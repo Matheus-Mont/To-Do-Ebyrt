@@ -32,8 +32,8 @@ function App() {
       </header>
       <main className="mb-4">
         <div className="flex-column justify-content-center p-3">
-          <div class="p-0 m-0">
-            <header class="flex text-center">
+          <div className="p-0 m-0">
+            <header className="flex text-center">
               <OrderTasks
                 list={list}
                 changeList={(v) => setList(v)}
