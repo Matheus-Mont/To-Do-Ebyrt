@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3001/",
+  baseURL: `http://${process.env.BE_HOST || 'localhost'}:${process.env.BE_PORT || 3001}/`,
 });
 
 const generateTasks = async (endpoint) => {
