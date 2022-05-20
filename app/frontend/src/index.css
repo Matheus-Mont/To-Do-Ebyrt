@@ -7,6 +7,10 @@ body {
   width: 30%;
 }
 
+.task-status {
+  max-width: 50%;
+}
+
 .order-header {
   width: 100%;
   display: flex;
