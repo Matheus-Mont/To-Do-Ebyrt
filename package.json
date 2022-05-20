@@ -1,0 +1,23 @@
+{
+  "name": "to-do-ebyrt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compose:up": "(cd app && docker-compose up -d --build)",
+    "compose:down": "(cd app && docker-compose down --remove-orphans)",
+    "compose:logs": "(cd app && docker-compose logs)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matheus-Mont/To-Do-Ebyrt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matheus-Mont/To-Do-Ebyrt/issues"
+  },
+  "homepage": "https://github.com/Matheus-Mont/To-Do-Ebyrt#readme"
+}
